@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import AuthPanel from "@/Components/Admin-panel/AuthPanel";
+import App from "./App";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,7 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <AuthPanel>{children}</AuthPanel>
+        <AuthPanel>
+          <App>{children}</App>
+        </AuthPanel>
+
+        <Toaster position="bottom-center" reverseOrder={false}/>
       </body>
     </html>
   );
