@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL") // Pastikan URL MongoDB ada di file .env
+}
+
+model Product {
+  id        String @id @map("_id") // ID MongoDB
+  name      String
+  category  String
+  price     String
+  fileKey   String
+  imgSrc    String @map("img_src") // Map ke nama kolom img_src di database
+}
+
+

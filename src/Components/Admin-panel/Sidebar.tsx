@@ -46,7 +46,7 @@ const Sidebar = () => {
   return (
     <div className='bg-white w-[300px] min-h-screen p-4 shrink-0'>
       <div className='flex items-center gap-4'>
-        <img className='size-12 rounded-lg' src={`Talisman.png`} alt='logo'/>
+        <img className='size-12 rounded-lg' alt='logo'/>
         <h2 className='text-[20px] font-semibold'>Web Gueh</h2>
       </div>
       {/*  */}
