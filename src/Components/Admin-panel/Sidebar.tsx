@@ -6,6 +6,7 @@ import { IoAnalytics, IoSettings } from "react-icons/io5"
 import { RiShoppingCartLine } from "react-icons/ri"
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 
 const menus = [
   {
@@ -16,7 +17,7 @@ const menus = [
   {
       title: "Products",
       icon: <RiShoppingCartLine/>,
-      href: "/AdminPanel/Products",
+      href: "/AdminPanel/Product",
   },
   {
       title: "Account",
@@ -46,7 +47,8 @@ const Sidebar = () => {
   return (
     <div className='bg-white w-[300px] min-h-screen p-4 shrink-0'>
       <div className='flex items-center gap-4'>
-        <img className='size-12 rounded-lg' alt='logo'/>
+        {/* <img className='size-12 rounded-lg' alt='logo'/> */}
+        <Image className='size-12 rounded-lg' src={"/Talisman.png"} width={100} height={100} alt='logo Guwh'/>
         <h2 className='text-[20px] font-semibold'>Web Gueh</h2>
       </div>
       {/*  */}

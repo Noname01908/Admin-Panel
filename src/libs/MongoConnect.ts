@@ -9,7 +9,7 @@ export const connectMongoDB = async () => {
       return mongoose.connection.asPromise();  // Kembalikan koneksi yang sudah ada
     }
 
-    //*statement ini berjalan ketika kondisi web belum terhubung dengan DB
+    //*statement ini berjalan ketika kondisi web belom terhubung dengan DB
     // Cek apakah `MONGO_URL` tersedia
     const mongoURL = process.env.MONGO_URL;
     if (!mongoURL) {
@@ -17,9 +17,7 @@ export const connectMongoDB = async () => {
     }
 
     // Sambungkan ke MongoDB jika belum terkoneksi
-    const connection = await mongoose.connect(mongoURL, {
-      dbName: "ECommerce", // Tentukan nama database jika diperlukan
-    });
+    const connection = await mongoose.connect(mongoURL)
 
     console.log("Connected to MongoDB successfully");
     return connection; // Kembalikan koneksi setelah berhasil

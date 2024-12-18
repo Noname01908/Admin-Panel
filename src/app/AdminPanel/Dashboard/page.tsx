@@ -1,4 +1,5 @@
 "use client"
+import PopUp from '@/Components/Admin-panel/PopUp'
 import ProductRow from '@/Components/Admin-panel/ProductRow'
 import { setLoading } from '@/redux/features/loadingReducer'
 import { useAppDispatch } from '@/redux/hook'
@@ -71,9 +72,9 @@ const Dashboard = () => {
             </table>
         </div>
       </div>
-      {/* {openpopup && (
-        <Popup setOpenPopUp={setOpenPopUp} setUpdateTable={setUpdateTable}/>
-      )} */}
+      {openpopup && (
+        <PopUp setOpenPopUp={setOpenPopUp} setUpdateTable={setUpdateTable}/>
+      )}
     </div>
   )
 }

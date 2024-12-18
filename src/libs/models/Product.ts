@@ -2,7 +2,7 @@ import { Schema, model, models } from "mongoose";
 
 // Mendefinisikan schema untuk produk
 const productSchema = new Schema({
-  _id: { type: String, required: true },
+  // _id: { type: String, required: true },
   name: { type: String, required: true },
   category: { type: String, required: true },
   price: { type: String, required: true },
@@ -11,5 +11,5 @@ const productSchema = new Schema({
 });
 
 // Menggunakan nama koleksi yang benar (di sini "Product")
-const Product = models.Product || model("Product", productSchema);
+const Product = models.products || model("products", productSchema);
 export default Product;

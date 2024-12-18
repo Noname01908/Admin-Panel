@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['media.istockphoto.com'], // Tambahkan domain di sini
+        domains: [
+            'media.istockphoto.com', 
+            'domain-uploadthing.com',
+            'utfs.io',
+        ],
     },
 };
 
