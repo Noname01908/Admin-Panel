@@ -1,4 +1,5 @@
 "use client"
+// komponen ini untuk mengisi data atau menambahkan produk baru ke database
 import { setLoading } from '@/redux/features/loadingReducer';
 import { useAppDispatch } from '@/redux/hook';
 import { makeToast } from '@/utils/helper';
